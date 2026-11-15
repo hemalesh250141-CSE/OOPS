@@ -1,0 +1,12 @@
+s = input().split()
+w1 = input()
+w2 = input()
+
+ans = float('inf')
+
+for i in range(len(s)):
+    for j in range(len(s)):
+        if s[i] == w1 and s[j] == w2 and i != j:
+            ans = min(ans, abs(i - j))
+
+print(ans if ans != float('inf') else -1)
